@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #12304A;
+  --color-navy-dark: #0D2235;
+  --color-navy-light: #1D4363;
+  --color-teal: #087F8C;
+  --color-teal-dark: #066670;
+  --color-teal-light: #0AA5B5;
+  --color-pale-blue: #EAF4F8;
+  --color-pale-blue-dark: #D3E6EF;
+  --color-slate: #536779;
+  --color-slate-light: #8295A5;
+  --color-amber: #F2B544;
+  --color-amber-dark: #C99026;
+  --color-emergency: #D64545;
+  --color-emergency-light: #FDECEC;
+}
+
+:root {
+  --background: #F8FAFC;
+  --foreground: #12304A;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Pulse badge animation for emergency */
+@keyframes emergency-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.02);
+  }
+}
+
+.emergency-pulse-badge {
+  animation: emergency-pulse 2s infinite ease-in-out;
+}

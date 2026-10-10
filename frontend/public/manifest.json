@@ -1,0 +1,16 @@
+{
+  "name": "SwasthyaRoute AI - Frontline Triage & Referral",
+  "short_name": "SwasthyaRoute",
+  "description": "Offline-first, voice-enabled AI triage and smart referral decision support for frontline health workers.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#12304A",
+  "theme_color": "#087F8C",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
